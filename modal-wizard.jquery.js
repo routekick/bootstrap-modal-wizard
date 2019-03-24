@@ -51,13 +51,13 @@
         var step = +$modal.attr("data-current-step"),
             stepsLength = $modal.find('[data-step]').length;
         if (step === 1) {
-            $modal.find('[data-step-to=prev]').hide().end().find('[data-step-to=next]').show().end().find('[data-submit]').hide();
+            $modal.find('[data-step-to=prev]').hide().end().find('[data-step-to=next]').show().end().find('[data-submit], [type=submit]').hide();
         } else if (step === stepsLength) {
-            $modal.find('[data-step-to=next]').hide().end().find('[data-submit]').show();
+            $modal.find('[data-step-to=next]').hide().end().find('[data-submit], [type=submit]').show();
         } else if (step > stepsLength && step < 0) {
             return;
         } else {
-            $modal.find('[data-step-to]').show().end().find('[data-submit]').hide();
+            $modal.find('[data-step-to]').show().end().find('[data-submit], [type=submit]').hide();
         }
         $modal
             .find("[data-step=" + step + "]")
@@ -69,7 +69,7 @@
     }
 
     function checkValidate($modal) {
-        var $step = $modal.find('input:required:invalid').closest('[data-step]');
+        var $step = $modal.find(':required:invalid').closest('[data-step]');
         if ($step.length) $modal.trigger('navigate', [null, $step.data('step')]);
     }
 

@@ -36,9 +36,6 @@
                     $this.find('input').val('');
                 }
             })
-            .on('submit', 'form', function (e) {
-                $(e.delegateTarget).trigger('reset');
-            })
             .on('click', '[data-submit], [type=submit]', function (e) {
                 var $modal = $(e.delegateTarget);
                 checkValidate($modal);

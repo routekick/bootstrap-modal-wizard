@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Bootstrap Modal Wizard</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css">
+    <style type="text/css">
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #333;
+        }
+
+        h3 {
+            font-size: 18px;
+        }
+
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"></script>
+    <script src="dist/jquery.modal-wizard.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+
+                <div class="text-center pt-3">
+                    <h2>Bootstrap Modal Wizard</h2>
+                    <hr>
+                    <button id="pushBtn" class="btn btn-secondary" data-toggle="modal"
+                        data-target="#exampleModal1">Launch Modal 1</button>
+                </div>
+
+                <!-- Modal Start -->
+                <div class="modal fade" id="exampleModal1" role="dialog" aria-labelledby="exampleModalLabel"
+                    data-current-step="1" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">User Registration</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <form action="" method="post">
+                                    <fieldset data-step="1">
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <h5>User Details</h5>
+                                            <span class="lead">#1</span>
+                                        </div>
+                                        <hr>
+                                        <div class="form-group row">
+                                            <div class="col-sm-12">
+                                                <label for="user_name">User Name</label>
+                                                <input type="text" name="user_name" id="user_name" class="form-control"
+                                                    required />
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <div class="col-sm-12">
+                                                <label for="full_name">Full Name</label>
+                                                <input type="text" name="full_name" id="full_name" class="form-control"
+                                                    required />
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <div class="col-sm-12">
+                                                <label for="birthday">Birthday</label>
+                                                <input type="date" name="birthday" id="birthday" class="form-control"
+                                                    required />
+                                            </div>
+                                        </div>
+                                    </fieldset>
+
+                                    <fieldset data-step="2">
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <h5>More User Details</h5>
+                                            <span class="lead">#2</span>
+                                        </div>
+                                        <hr>
+                                        <div class="form-group row">
+                                            <div class="col-sm-12">
+                                                <label for="picture">Profile Picture</label>
+                                                <input type="file" name="picture" id="picture" class="form-control p-0"
+                                                    required />
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <div class="col-sm-12">
+                                                <label for="color">Favorite Color</label>
+                                                <input type="color" name="color" id="color" class="form-control"
+                                                    required />
+                                            </div>
+                                        </div>
+                                    </fieldset>
+
+                                    <fieldset data-step="3">
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <h5>User Agreement</h5>
+                                            <span class="lead">#3</span>
+                                        </div>
+                                        <hr>
+                                        <div class="form-group row">
+                                            <div class="col-sm-12">
+                                                <p class="lead">By clicking submit you agree to the <a href="#">terms and conditions</a></p>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-step-to="prev">
+                                            Previous
+                                        </button>
+                                        <button type="button" class="btn btn-success" data-step-to="next">
+                                            Next
+                                        </button>
+                                        <button type="submit" class="btn btn-info">
+                                            Submit
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal End -->
+
+            </div>
+        </div>
+    </div>
+    <script>
+        $('#exampleModal1').modalWizard().on('submit', function (e) {
+            alert('submited');
+            $(this).trigger('reset');
+
+            $(this).modal('hide');
+        });
+
+    </script>
+</body>
+
+</html>

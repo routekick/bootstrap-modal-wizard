@@ -4,7 +4,7 @@
 
 It's a `Bootstrap` plugin to create modal with multisteps like installing wizard.
 
-![bootstrap-modal-wizard](https://user-images.githubusercontent.com/17254073/55558124-0fe22a80-56f4-11e9-83c6-8b4c5c653aed.gif)
+<p align="center"><a href="https://routekick.github.io/bootstrap-modal-wizard/" target="_blank" rel="noopener noreferrer"><img  src="https://user-images.githubusercontent.com/17254073/55558124-0fe22a80-56f4-11e9-83c6-8b4c5c653aed.gif" alt="Bootstrap Modal Wizrad demo"></a></p>
 
 ## Install
 

@@ -1,0 +1,23 @@
+{
+    "extends": "eslint:recommended",
+    "env": {
+        "jquery": true,
+        "browser": true
+    },
+    "rules": {
+        "no-alert": "error",
+        "array-bracket-spacing": "error",
+        "space-before-function-paren": "error",
+        "block-spacing": "error",
+        "block-scoped-var": "error",
+        "curly": "error",
+        "no-dupe-keys": "error",
+        "no-useless-return": "error",
+        "no-useless-rename": "error",
+        "no-tabs": "error",
+        "no-trailing-spaces": ["error", "never"],
+        "space-before-blocks": "error",
+        "padded-blocks": ["error", "never"],
+        "no-console": "off"
+    }
+}

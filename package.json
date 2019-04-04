@@ -1,0 +1,40 @@
+{
+  "name": "bootstrap-modal-wizard",
+  "version": "1.0.0",
+  "description": "Bootstrap plugin to create modal with multisteps like installing wizard",
+  "keywords": [
+    "bootstrap",
+    "jquery",
+    "wizard",
+    "modal",
+    "plugins",
+    "multistep"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/routekick/bootstrap-modal-wizard.git"
+  },
+  "bugs": {
+    "url": "https://github.com/routekick/bootstrap-modal-wizard/issues"
+  },
+  "homepage": "https://github.com/routekick/bootstrap-modal-wizard",
+  "author": {
+    "name": "Routekick",
+    "url": "https://github.com/routekick",
+    "email": "info@routekick.com"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "grunt": "^1.0.4",
+    "grunt-concurrent": "^2.3.1",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-uglify": "^4.0.1",
+    "grunt-contrib-watch": "^1.1.0",
+    "grunt-devserver": "^0.6.0"
+  },
+  "scripts": {
+    "build": "grunt build",
+    "start": "grunt dev"
+  }
+}
